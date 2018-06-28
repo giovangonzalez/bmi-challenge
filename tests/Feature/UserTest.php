@@ -41,6 +41,7 @@ class UserTest extends TestCase
         $this->post('/register', ['name' => 'Milton', 
                                   'email' => 'giovangonzalez@gmail.com', 
                                   'password' => '123456',
+                                  'password_confirmation' => '123456',
                                   'height' => '168',
                                   'weight' => '70',
                                   ])
