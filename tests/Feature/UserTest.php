@@ -38,7 +38,12 @@ class UserTest extends TestCase
     public function testSignupSubmit()
     {
         
-        $this->post('/register', ['name' => 'Milton', 'email' => 'giovangonzalez@gmail.com', 'password' => '123456'])
+        $this->post('/register', ['name' => 'Milton', 
+                                  'email' => 'giovangonzalez@gmail.com', 
+                                  'password' => '123456',
+                                  'height' => '168',
+                                  'weight' => '70',
+                                  ])
              ->assertLocation('/home');
              
         
