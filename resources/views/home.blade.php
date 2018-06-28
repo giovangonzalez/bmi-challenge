@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header"><b>{{ $user->name }} - {{ $user->email }}</b></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,15 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    
+                    <div>Your height: {{ $user->height }} cms.</div>
+                    
+                    <div>Your weight: {{ $user->weight }} kg.</div>
+                    
+                    <div>Your Body Mass Index is: <b>{{ $bmi }}</b></div>
+                    
+                    <div>Your category is: <b>{{ $category }}</b></div>
+                    
                 </div>
             </div>
         </div>
